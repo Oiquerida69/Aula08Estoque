@@ -21,11 +21,22 @@ namespace Aula08Estoque
         {
             InitializeComponent();
         }
-        void AdicionaProduto()
+        Ultilidades ultilidades = new Ultilidades();
+        void VerificarNomes()
         {
             
+        }
+        void AdicionaProduto()
+        {
+
+            if (ultilidades.textboxestavazio(txt_Nome) == true || ultilidades.textboxestavazio(txt_Quantidade) == true)
+            {
+                MessageBox.Show("Preencha os campos vazios");
+                return;
+            }
             
                 string nome = txt_Nome.Text;
+            ultilidades.textboxestavazio(txt_Quantidade);
                 int quantidade = int.Parse(txt_Quantidade.Text);
                 Produtos_nomes.Add(nome);
                 Quantidade_Produtos.Add(quantidade);
@@ -37,8 +48,21 @@ namespace Aula08Estoque
         
         void AtualizaInteface()
         {
+            
+            // contabiliza a quantidade cadastrada
             int quantidade_cadastrada = Produtos_nomes.Count();
             lbl_Cadastro.Text = $"{quantidade_cadastrada}";
+
+            // contabiliza produtos em estoque
+            int estoque = 0;
+            for (int i = 0; i < Quantidade_Produtos.Count; i++)
+            {
+                int quantidade = Quantidade_Produtos[i];
+                estoque += quantidade;
+            }
+            lbl_estoque.Text = $"{estoque}";
+
+
 
            
         }
@@ -79,13 +103,16 @@ namespace Aula08Estoque
         {
             AdicionaProduto();
             AtualizaInteface();
-            MessageBox.Show("Produto registrado com sucesso");
             LimparTudo();
             for (int i = 0; i < Produtos_nomes.Count; i++)
             {
                 list.Items.Add(Produtos_nomes[i]);
             }
+            if(Produtos_nomes.Count >= 1)
+            {
             list.Show();
+
+            }
 
 
             
@@ -137,6 +164,12 @@ namespace Aula08Estoque
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            ultilidades.mostraMensagem(); 
         }
     }
 }

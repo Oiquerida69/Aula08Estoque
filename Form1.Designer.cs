@@ -30,24 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_Nome = new System.Windows.Forms.TextBox();
-            this.txt_Quantidade = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_Salvar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_Cadastro = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbl_estoque = new System.Windows.Forms.Label();
-            this.btn_Vp = new System.Windows.Forms.Button();
-            this.btn_VU = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Quantidade = new System.Windows.Forms.TextBox();
+            this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_estoque = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Cadastro = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_VU = new System.Windows.Forms.Button();
+            this.btn_Vp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.list = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
+            this.list = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,6 +71,58 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastro";
             // 
+            // btn_Cancelar
+            // 
+            this.btn_Cancelar.Location = new System.Drawing.Point(107, 133);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(75, 27);
+            this.btn_Cancelar.TabIndex = 5;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.Location = new System.Drawing.Point(25, 133);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(76, 27);
+            this.btn_Salvar.TabIndex = 4;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Quantidade em estoque";
+            // 
+            // txt_Quantidade
+            // 
+            this.txt_Quantidade.Location = new System.Drawing.Point(25, 107);
+            this.txt_Quantidade.Name = "txt_Quantidade";
+            this.txt_Quantidade.Size = new System.Drawing.Size(169, 20);
+            this.txt_Quantidade.TabIndex = 2;
+            // 
+            // txt_Nome
+            // 
+            this.txt_Nome.Location = new System.Drawing.Point(25, 59);
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.Size = new System.Drawing.Size(169, 20);
+            this.txt_Nome.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome do produto";
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Coral;
@@ -79,10 +132,50 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(218, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 153);
+            this.groupBox2.Size = new System.Drawing.Size(200, 180);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações";
+            // 
+            // lbl_estoque
+            // 
+            this.lbl_estoque.AutoSize = true;
+            this.lbl_estoque.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estoque.Location = new System.Drawing.Point(56, 92);
+            this.lbl_estoque.Name = "lbl_estoque";
+            this.lbl_estoque.Size = new System.Drawing.Size(20, 23);
+            this.lbl_estoque.TabIndex = 3;
+            this.lbl_estoque.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(182, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Quantidade em Estoque";
+            // 
+            // lbl_Cadastro
+            // 
+            this.lbl_Cadastro.AutoSize = true;
+            this.lbl_Cadastro.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cadastro.Location = new System.Drawing.Point(56, 38);
+            this.lbl_Cadastro.Name = "lbl_Cadastro";
+            this.lbl_Cadastro.Size = new System.Drawing.Size(20, 23);
+            this.lbl_Cadastro.TabIndex = 1;
+            this.lbl_Cadastro.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Produtos Cadastrados";
             // 
             // groupBox3
             // 
@@ -97,95 +190,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operações";
             // 
-            // label1
+            // btn_Delete
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome do produto";
-            // 
-            // txt_Nome
-            // 
-            this.txt_Nome.Location = new System.Drawing.Point(25, 59);
-            this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(169, 20);
-            this.txt_Nome.TabIndex = 1;
-            // 
-            // txt_Quantidade
-            // 
-            this.txt_Quantidade.Location = new System.Drawing.Point(25, 107);
-            this.txt_Quantidade.Name = "txt_Quantidade";
-            this.txt_Quantidade.Size = new System.Drawing.Size(169, 20);
-            this.txt_Quantidade.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Quantidade em estoque";
-            // 
-            // btn_Salvar
-            // 
-            this.btn_Salvar.Location = new System.Drawing.Point(25, 133);
-            this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(76, 27);
-            this.btn_Salvar.TabIndex = 4;
-            this.btn_Salvar.Text = "Salvar";
-            this.btn_Salvar.UseVisualStyleBackColor = true;
-            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Produtos Cadastrados";
-            // 
-            // lbl_Cadastro
-            // 
-            this.lbl_Cadastro.AutoSize = true;
-            this.lbl_Cadastro.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cadastro.Location = new System.Drawing.Point(69, 38);
-            this.lbl_Cadastro.Name = "lbl_Cadastro";
-            this.lbl_Cadastro.Size = new System.Drawing.Size(17, 19);
-            this.lbl_Cadastro.TabIndex = 1;
-            this.lbl_Cadastro.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Quantidade em Estoque";
-            // 
-            // lbl_estoque
-            // 
-            this.lbl_estoque.AutoSize = true;
-            this.lbl_estoque.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estoque.Location = new System.Drawing.Point(69, 92);
-            this.lbl_estoque.Name = "lbl_estoque";
-            this.lbl_estoque.Size = new System.Drawing.Size(17, 19);
-            this.lbl_estoque.TabIndex = 3;
-            this.lbl_estoque.Text = "0";
-            // 
-            // btn_Vp
-            // 
-            this.btn_Vp.Location = new System.Drawing.Point(31, 43);
-            this.btn_Vp.Name = "btn_Vp";
-            this.btn_Vp.Size = new System.Drawing.Size(169, 23);
-            this.btn_Vp.TabIndex = 0;
-            this.btn_Vp.Text = "Ver PRIMEIRO produto";
-            this.btn_Vp.UseVisualStyleBackColor = true;
-            this.btn_Vp.Click += new System.EventHandler(this.btn_Vp_Click);
+            this.btn_Delete.Location = new System.Drawing.Point(228, 53);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(172, 23);
+            this.btn_Delete.TabIndex = 2;
+            this.btn_Delete.Text = "Deletar PRIMEIRO produto";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_VU
             // 
@@ -197,25 +210,15 @@
             this.btn_VU.UseVisualStyleBackColor = true;
             this.btn_VU.Click += new System.EventHandler(this.btn_VU_Click);
             // 
-            // btn_Delete
+            // btn_Vp
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(228, 53);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(172, 23);
-            this.btn_Delete.TabIndex = 2;
-            this.btn_Delete.Text = "Deletar PRIMEIRO produto";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
-            // btn_Cancelar
-            // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(107, 133);
-            this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(75, 27);
-            this.btn_Cancelar.TabIndex = 5;
-            this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
-            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
+            this.btn_Vp.Location = new System.Drawing.Point(31, 43);
+            this.btn_Vp.Name = "btn_Vp";
+            this.btn_Vp.Size = new System.Drawing.Size(169, 23);
+            this.btn_Vp.TabIndex = 0;
+            this.btn_Vp.Text = "Ver PRIMEIRO produto";
+            this.btn_Vp.UseVisualStyleBackColor = true;
+            this.btn_Vp.Click += new System.EventHandler(this.btn_Vp_Click);
             // 
             // panel1
             // 
@@ -225,6 +228,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(281, 330);
             this.panel1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Produtos";
             // 
             // list
             // 
@@ -237,15 +250,16 @@
             this.list.View = System.Windows.Forms.View.List;
             this.list.Visible = false;
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Produtos";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(422, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 44);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Função";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -253,7 +267,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Moccasin;
-            this.ClientSize = new System.Drawing.Size(427, 349);
+            this.ClientSize = new System.Drawing.Size(771, 349);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -294,6 +309,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView list;
+        private System.Windows.Forms.Button button1;
     }
 }
 
